@@ -1,18 +1,29 @@
 # Illegal Dumping Forecasting Tool
-[EDIT THESE PLACEHOLDERS]
-**Problem**: forecast illegal dumping 311 requests in Philly
 
-**Data**: OpenDataPhilly 311 (CARTO public_cases_fc), data span used, filters
+#### Problem: Forecast weekly counts of Philadelphia 311 **illegal dumping** requests to support staffing and cleanup planning
 
-**Method**: Prophet baseline; LSTM advanced; exogenous vars if used.
+**Data**:
+- Source: OpenDataPhilly - CARTO table public_cases_fc (service_code = SR-ST02)
+- Range: 2016-present (daily aggregated to weekly)
+- Files: 'data/illegal_dumping_daily.csv', 'data/illegal_dumping_weekly.csv'
 
-**Backtesting**: how data was split, metrics.
+**Method**:
+- Baseline: Prophet (weekly and yearly seasonality)
+- Advanced: LSTM (lookback=12 weeks), optional exogenous features (weather, holidays)
 
-**Results**: table + chart; when each model wins; error analysis
+**Backtesting**:
+- Time-based split 70/15/15 (train/val/test)
+- Metrics: MAE, RMSE; naseline = naïve last-value
 
-**Limitations**: reporting changes, COVID shifts, category drift.
+**Results**:
+- (fill in) Prophet vs LSTM error table + plots
+- table + chart; when each model wins; error analysis
 
-**How to run**: elaborate on how to run each file type...make_dataset.py -> notebooks -> app
+**Limitations**: 
+- Reporting changes, COVID shifts, category drift.
+
+**How to run**: 
+- elaborate on how to run each file type...make_dataset.py -> notebooks -> app
 
 1. check status of api:
 curl --get "https://phl.carto.com/api/v2/sql" \

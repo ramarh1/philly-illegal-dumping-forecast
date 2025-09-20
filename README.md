@@ -22,6 +22,10 @@
 **Limitations**: 
 - Reporting changes, COVID shifts, category drift.
 
+**Key Insights**:
+- Illegal dumping 311 reports have spiked most often in July and August in recent years.
+-
+
 **How to run**: 
 - elaborate on how to run each file type...make_dataset.py -> notebooks -> app
 

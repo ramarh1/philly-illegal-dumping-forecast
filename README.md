@@ -13,7 +13,8 @@
 
 **Backtesting**
 - Time-based split 70/15/15 (train/val/test)
-- Metrics: MAE, RMSE; naseline = naïve last-value
+- LTSM -> RMSE: 2.98
+- Metrics: MAE; naseline = naïve last-value
 
 **Results**
 **Prophet**
